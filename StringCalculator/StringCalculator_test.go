@@ -2,12 +2,13 @@ package StringCalculator
 
 import "testing"
 
-func Test_add_number_1_return_1(t *testing.T) {
+func Test_text(t *testing.T) {
 	tests := []struct {
 		input    string
 		expected int
 	}{
 		{"1", 1},
+		{"1,2", 3},
 	}
 
 	for _, test := range tests {

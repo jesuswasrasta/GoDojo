@@ -2,9 +2,16 @@ package StringCalculator
 
 import (
 	"strconv"
+	"strings"
 )
 
 func add(text string) (int, error) {
-	num, err := strconv.Atoi(text)
-	return num, err
+	strs := strings.Split(text, ",")
+
+	total := 0
+	for _, s := range strs {
+		num, _ := strconv.Atoi(s)
+		total += num
+	}
+	return total, nil
 }
