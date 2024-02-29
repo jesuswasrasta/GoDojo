@@ -11,7 +11,7 @@ func Test_add_number_1_return_1(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		var result = add(test.input)
+		var result, _ = add(test.input)
 		if result != test.expected {
 			t.Errorf("Add(\"%s\") = %d; want %d", test.input, result, test.expected)
 		}

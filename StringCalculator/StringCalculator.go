@@ -1,5 +1,10 @@
 package StringCalculator
 
-func add(text string) int {
-	return 0
+import (
+	"strconv"
+)
+
+func add(text string) (int, error) {
+	num, err := strconv.Atoi(text)
+	return num, err
 }
