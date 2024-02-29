@@ -11,8 +11,9 @@ func Test_text(t *testing.T) {
 		{"1,2", 3},
 	}
 
+	stringCalculator := StringCalculator{}
 	for _, test := range tests {
-		var result, _ = add(test.input)
+		var result, _ = stringCalculator.add(test.input)
 		if result != test.expected {
 			t.Errorf("Add(\"%s\") = %d; want %d", test.input, result, test.expected)
 		}
